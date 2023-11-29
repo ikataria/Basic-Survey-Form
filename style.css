@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=IBM+Plex+Sans:wght@700&family=Raleway:wght@200;400&family=Roboto:wght@400&family=Titillium+Web&display=swap");
+
+/* RESET CLASS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* UTILITY CLASSES */
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+/* VARIABLES */
+:root {
+  /* FONTS */
+  --FF: "Roboto", "sans-serif";
+  --FF-H1: "Titillium";
+  --FS-H1: 2rem;
+  --FS-PRGPH: 1.2rem;
+
+  /* COLORS */
+
+  --LIGHT-COLOR: #9e9c98;
+  --COLOR-H1: #9e9c98;
+  --BG-COLOR-OUTER: #333;
+  --BG-COLOR-INNER: #333;
+  --INPUT-TXT-COLOR: #9e9c98;
+  --INPUT-BG-COLOR: #282828;
+  --HEADER-COLOR: #333;
+  --FOOTER-COLOR: #333;
+  --HIGHLIGHT-COLOR: rgb(29 156 160);
+  --LABEL-TXT-COLOR: #9e9c98;
+  --SELECT-TXT-COLOR: #757575;
+
+
+  /* MARGIN */
+  --MARGIN: 10px;
+  --MARGIN-TB: 10px;
+  --MARGIN-SIDES: 10px;
+
+  /* PADDING */
+  --PADDING: 10px;
+  --PADDING-TB: 10px;
+  --PADDING-SIDES: 10px;
+  --PADDING-P: 5px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* COLORS */
+    --LIGHT-COLOR: #fff;
+    --COLOR-H1: #fff;
+    --BG-COLOR-OUTER: rgb(82, 111, 137);
+    --BG-COLOR-INNER: lightsteelblue;
+    --INPUT-TXT-COLOR: #dbdfe0;
+    --INPUT-BG-COLOR: #fff;
+    --HEADER-COLOR: steelblue;
+    --FOOTER-COLOR: steelblue;
+    --HIGHLIGHT-COLOR: rgb(255, 255, 255);
+    --LABEL-TXT-COLOR: #061229;
+    --SELECT-TXT-COLOR: #757575;
+  }
+}
+
+/* GENERAL STYLE */
+html {
+  background-color: var(--BG-COLOR-OUTER);
+}
+
+body {
+  font-family: var(--FF);
+  font-size: var(--FS-PRGPH);
+  display: flex;
+  flex-flow: column nowrap;
+  width: 80%;
+  margin: auto;
+  background-color: var(--BG-COLOR-INNER);
+  box-shadow: 0px 0px 15px  rgb(0, 0, 0) ;
+}
+
+.fieldset {
+  border: none;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--HEADER-COLOR);
+  padding: var(--PADDING-TB);
+}
+
+.header__h1 {
+  color: var(--COLOR-H1);
+  font-size: var(--FS-H1);
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--FOOTER-COLOR);
+  padding: var(--PADDING-TB);
+}
+
+.footer__p {
+  font-weight: 600;
+}
+
+.developerName {
+  color: var(--LIGHT-COLOR);
+}
+
+/* MAIN */
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form__p {
+  padding: var(--PADDING-P);
+  margin: var(--MARGIN);
+}
+
+.fullWidth {
+  display: block;
+  width: 100%;
+}
+
+.form__label {
+  margin-bottom: 5px;
+  color: var(--LABEL-TXT-COLOR);
+
+}
+
+.form__input {
+  padding: 5px;
+  font-size: var(--FS-PRGPH);
+  color: var(--INPUT-TXT-COLOR);
+  background-color: var(--INPUT-BG-COLOR);
+  text-transform: lowercase;
+}
+
+.form__selectInput{
+  color: var(--SELECT-TXT-COLOR);
+}
+
+.form__textarea {
+  background-color: var(--INPUT-BG-COLOR);
+}
+
+.form__submit {
+  padding: 3px;
+  background-color: var(--BG-COLOR-OUTER);
+  color: var(--LIGHT-COLOR);
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: var(--HIGHLIGHT-COLOR) 3px 5px 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px){
+  body {
+    font-size: 18px;
+  }
+
+  .header__h1{
+    font-size: 28px;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 600px){
+  html {
+    margin: 50px;
+  }
+}

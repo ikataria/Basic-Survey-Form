@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__h1 nowrap center">Survey Form</h1>
+    </header>
+
+    <main class="main">
+      <form
+        class="form"
+        action="https://httpbin.org/post"
+        method="post"
+        target="_blank"
+      >
+        <fieldset class="fieldset">
+          <legend class="offscreen">Your Details</legend>
+
+          <p class="form__p">
+            <label class="form__label fullWidth" for="name">Name</label>
+            <input
+              class="form__input fullWidth"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              autocomplete="given-name family-name"
+            />
+          </p>
+          <p class="form__p">
+            <label class="form__label fullWidth" for="email">Email</label>
+            <input
+              class="form__input fullWidth"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </p>
+          <p class="form__p">
+            <label class="form__label fullWidth" for="age">Age</label>
+            <input
+              class="form__input fullWidth"
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age"
+            />
+          </p>
+          <p class="form__p">
+            <label class="form__label fullWidth" for="status"
+              >Which option best describe you ?</label
+            >
+            <select name="status" id="status" class="form__input fullWidth form__selectInput">
+              <option value="student" selected>Student</option>
+              <option value="pgwp">PGWP</option>
+              <option value="wp">Worker</option>
+              <option value="pr">PR</option>
+              <option value="citizen">Citizen</option>
+            </select>
+          </p>
+          <p class="form__p">
+            <label class="form__label " for="recommendation"
+              >Would you recommend Mohit Kataria to a friend?</label
+            >
+            <br />
+            <input
+              class="form__input"
+              type="radio"
+              name="recommendation"
+              id="recommendation"
+              value="yes"
+            />
+            <label class="form__label" for="recommendation">Yes</label>
+            <br />
+            <input
+              class="form__input"
+              type="radio"
+              name="recommendation"
+              id="no"
+              value="no"
+            />
+            <label class="form__label" for="recommendation">No</label>
+            <br />
+            <input
+              class="form__input"
+              type="radio"
+              name="recommendation"
+              id="maybe"
+              value="maybe"
+            />
+            <label class="form__label" for="recommendation">Maybe</label>
+          </p>
+
+          <p class="form__p">
+            <label class="form__label" for="skills"
+              >Technologies known <small>(Check all that apply)</small></label
+            >
+            <br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="html"
+              value="html"
+            />
+            <label class="form__label" for="skills">HTML</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="css"
+              value="css"
+            />
+            <label class="form__label" for="skills">CSS</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="c"
+              value="c"
+            />
+            <label class="form__label" for="skills">C</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="c#"
+              value="c#"
+            />
+            <label class="form__label" for="skills">C#</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="c++"
+              value="c++"
+            />
+            <label class="form__label" for="skills">C++</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="javascript"
+              value="javascript"
+            />
+            <label class="form__label" for="skills">Javascript</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="java"
+              value="java"
+            />
+            <label class="form__label" for="skills">Java</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="python"
+              value="python"
+            />
+            <label class="form__label" for="skills">Python</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="react"
+              value="react"
+            />
+            <label class="form__label" for="skills">React</label><br />
+            <input
+              class="form__input"
+              type="checkbox"
+              name="skills"
+              id="node"
+              value="node"
+            />
+            <label class="form__label" for="skills">Node</label><br />
+          </p>
+          <p class="form__p">
+            <label class="form__label" for="comments"
+              >Any comments or suggestions</label
+            >
+            <br />
+            <textarea
+              class="form__textarea fullWidth"
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="4"
+            ></textarea>
+          </p>
+          <p class="form__p">
+            <button class="form__submit fullWidth" type="submit">Submit</button>
+          </p>
+        </fieldset>
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__p center">
+        Conducted by <span class="nowrap developerName">Mohit Kataria</span>
+      </p>
+    </footer>
+  </body>
+</html>
